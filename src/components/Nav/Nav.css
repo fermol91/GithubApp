@@ -1,0 +1,18 @@
+.Navigation {
+	display: flex;
+	background: rgb(80, 73, 73);
+	min-height: 5vh;
+}
+
+ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.Link {
+	color: white;
+	list-style: none;
+	font-size: 20px;
+}

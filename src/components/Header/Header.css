@@ -1,0 +1,16 @@
+.Header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 35vh;
+	width: 100%;
+	background: rgb(182, 163, 163);
+	
+	
+	
+}
+
+.Header h1 {
+	font-size: 44px;
+}

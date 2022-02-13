@@ -3,10 +3,11 @@ import axios from 'axios';
 import './CharacterList.css';
 
 
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import CharacterCard from '../CharacterCard/CharacterCard';
 import Spinner from '../Spinner/Spinner';
+//import CharacterDetail from '../../views/CharacterDetail/CharacterDetail';
 
 const CharacterList = () => {
 	const [characters, setCharacters] = useState([]);
@@ -30,9 +31,7 @@ const CharacterList = () => {
 					{characters.map((char) => {
 						return (
 							<div key={char.char_id}>
-								<Link to={`/detail/${char.char_id}`} className='Link'>
-									<CharacterCard data={char} />
-								</Link>
+								<CharacterCard data={char} />
 							</div>
 						);
 					})}
@@ -43,3 +42,8 @@ const CharacterList = () => {
 };
 
 export default CharacterList;
+/*
+<Link to={`/detail/${char.char_id}`} className='Link'>
+									<CharacterCard data={char} />
+								</Link>
+								*/

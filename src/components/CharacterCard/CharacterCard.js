@@ -1,19 +1,22 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
 
+import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
-export default function CharacterCard({ data }) {
+
+
+function CharacterCard ({ data}) {
 	return (
 		<Card sx={{ maxWidth: 345 }}>
 			<CardMedia
 				component='img'
 				height='440'
 				image={data.avatar_url}
-				alt='green iguana'
+				alt='Avatar Usuario'
 			/>
 			<CardContent>
 				<Typography gutterBottom variant='h5' component='div'>
@@ -22,7 +25,12 @@ export default function CharacterCard({ data }) {
 				<Typography variant='body2' color='text.secondary'>
 					Repo: {data.repos_url}
 				</Typography>
+				<div>
+				<Link to={`/detail/${data.id}`}><Button>Detalle</Button></Link>
+				</div>
 			</CardContent>
 		</Card>
 	);
 }
+
+export default CharacterCard;

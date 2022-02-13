@@ -12,6 +12,7 @@ import Home from './views/Home/Home';
 import About from './views/About/About';
 import Contact from './views/Contact/Contact';
 import CharacterDetail from './views/CharacterDetail/CharacterDetail';
+//import CharacterCard from './components/CharacterCard/CharacterCard';
 
 const App = () => {
 	return (
@@ -31,3 +32,5 @@ const App = () => {
 };
 
 export default App;
+
+//<Route path='/detail/:id' element={<CharacterDetail />} />

@@ -4,6 +4,8 @@ import { useParams } from 'react-router';
 import './CharacterDetail.css';
 import CharacterCard from '../../components/CharacterCard/CharacterCard';
 import Spinner from '../../components/Spinner/Spinner';
+import Counter from '../../components/Counter/Counter';
+
 
 const CharacterDetail = () => {
 	const [character, setCharacter] = useState([]);
@@ -32,13 +34,13 @@ const CharacterDetail = () => {
 				<Spinner />
 			) : (
 				<div className='CharacterList-detail'>
-					{character.map((char) => {
-						return (
-							<div key={char.html_url}>
-								<CharacterCard data={char} />
+					
+							<div>
+								<CharacterCard data={character} />
+								<Counter />
 							</div>
-						);
-					})}
+						
+					
 				</div>
 			)}
 		</div>

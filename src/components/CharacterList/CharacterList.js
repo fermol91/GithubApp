@@ -9,6 +9,8 @@ import CharacterCard from '../CharacterCard/CharacterCard';
 import Spinner from '../Spinner/Spinner';
 //import CharacterDetail from '../../views/CharacterDetail/CharacterDetail';
 
+
+
 const CharacterList = () => {
 	const [characters, setCharacters] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +32,7 @@ const CharacterList = () => {
 				<div className='CharacterList-container'>
 					{characters.map((char) => {
 						return (
-							<div key={char.char_id}>
+							<div key={char.id}>
 								<CharacterCard data={char} />
 							</div>
 						);

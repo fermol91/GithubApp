@@ -12,6 +12,7 @@ import Home from './views/Home/Home';
 import About from './views/About/About';
 import Contact from './views/Contact/Contact';
 import CharacterDetail from './views/CharacterDetail/CharacterDetail';
+import Cart from './components/Cart/Cart';
 //import CharacterCard from './components/CharacterCard/CharacterCard';
 
 const App = () => {
@@ -25,6 +26,8 @@ const App = () => {
 					<Route path='/about' element={<About />} />
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/detail/:id' element={<CharacterDetail />} />
+					<Route path='/Cart' element={<Cart />} />
+					
 				</Routes>
 			</div>
 		</Router>

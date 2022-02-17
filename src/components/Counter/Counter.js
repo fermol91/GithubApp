@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import {Link} from "react-router-dom";
 
 const Counter = (onAdd) => {
 
@@ -26,7 +26,9 @@ const Counter = (onAdd) => {
             <button onClick={handlerCounterUp}>+</button>
             <button onClick={handlerCounterDown}>-</button>
             <div>
-                <button onClick={() => onAdd(counter)}>Agregar al carrito</button>
+                <Link to={'/Cart'}>
+                    <button onClick={() => onAdd(counter)}>Agregar al carrito</button>
+                </Link>    
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
-import './CartSummary.css'
-//import { Table } from "react-bootstrap";
+
+
 import CartWidget from '../CartWidget/CartWidget';
-import { useCartContext } from "../../../context/CartContext"
+import { useCartContext } from "../../Context/Context"
 
 
 function CartSummary() {
@@ -16,7 +16,6 @@ function CartSummary() {
                     <th>Imagen</th>
                     <th>useructo</th>
                     <th>Cantidad</th>
-                    <th>Precio</th>
                     <th>Subtotal</th>
                     <th>Remover</th>
                     </tr>
@@ -26,11 +25,10 @@ function CartSummary() {
                     <tr>
                     <td><img src={user.img} alt={user.name} /></td>
                     <td>{user.name}</td>
-                    <td>{user.quantity}</td>
-                    <td>${user.price}</td>
-                    <td>${user.price * user.quantity}</td>
+                    <td>{user.quantity}</td>                    
+                    <td>${user.quantity}</td>
                     <td>
-                        <button onClick={() => deleteItem(user.id)} className="buttonTrashWidget">
+                        <button onClick={() => deleteItem(user.id)}>
                             <CartWidget />
                         </button>
                     </td>
